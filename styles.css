@@ -1,0 +1,346 @@
+/* styles.css — tipografia aplicada conforme especificações do design enviado
+   Substitua o arquivo atual por este (ou salve como typography.css e importe depois).
+*/
+
+:root{
+  --white: #ffffff;
+  --text: #0f172a;
+  --muted: #4B5563;
+  --muted-2: #6B7280;
+  --primary-blue: #0649C0;     /* usado para muitos textos e ícones */
+  --primary-blue-weak: #2563EB; /* azul mais vivo quando necessário */
+  --accent-civil: #BFDBFE;     /* cor do 'Civil' */
+  --lead-blue: #DBEAFE;        /* lead no hero */
+  --availability-text: #374151;
+  --card-bg: #ffffff;
+  --surface: #f8fafc;
+  --shadow: 0 6px 20px rgba(2,6,23,0.08);
+  font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* Reset e container */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:var(--surface);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+  font-size:16px;
+}
+.container{max-width:1180px;margin:0 auto;padding:0 24px;}
+
+/* ---------- HEADER (tipografia pequena) ---------- */
+.site-header .brand{font-family:Inter; font-weight:700; color:var(--primary-blue); font-size:24px; line-height:32px;}
+.site-header .brand .brand-name{color:var(--text); font-weight:600; font-size:18px; line-height:28px; margin-left:6px;}
+
+/* nav links */
+.nav a{font-family:Inter; font-size:16px; font-weight:400; color:#374151; line-height:24px; text-decoration:none;}
+
+/* botão principal (texto) */
+.btn{font-family:Inter; font-size:14px; font-weight:600; line-height:20px; color:var(--primary-blue);}
+
+/* botão mobile icon */
+.btn-mobile{font-size:18px; color:var(--primary-blue);}
+
+/* ---------- HERO ---------- */
+/* H1 - "Engenheiro Civil"
+   - "Engenheiro": branco, 60px, Inter 700, line-height 60px
+   - "Civil" (span.accent): #BFDBFE, mesma tipografia
+*/
+.hero-copy h1{
+  margin:0;
+  font-family:Inter;
+  font-weight:700;
+  font-size:60px;
+  line-height:60px;
+  color:var(--white); /* Engenheiro */
+  word-wrap:break-word;
+}
+.hero-copy h1 .accent{
+  color: var(--accent-civil); /* Civil */
+  display:inline;
+}
+
+/* Lead / descrição do hero */
+.hero-copy .lead{
+  font-family:Inter;
+  font-weight:400;
+  font-size:20px;
+  line-height:32.5px;
+  color:var(--lead-blue);
+  margin-top:18px;
+  max-width:56ch;
+  word-wrap:break-word;
+}
+
+/* CTA Buttons — texto (ícone + label)
+   - ícones (Font Awesome) como especificado: color #0649C0, font-size 14, weight 900
+   - labels "Contratar" / "Ver Trabalhos": color #0649C0, font-size 14px, Inter 600
+*/
+.hero-ctas .fas, .hero-ctas .far, .hero-ctas .fal { /* ícones dentro do CTA */
+  color: var(--primary-blue);
+  font-size:14px;
+  font-weight:900; /* Font Awesome solid */
+  line-height:14px;
+  margin-right:8px;
+}
+.hero-ctas .btn{
+  font-family:Inter;
+  font-weight:600;
+  font-size:14px;
+  line-height:20px;
+  color:var(--primary-blue);
+  text-decoration:none;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:10px 14px;
+  border-radius:10px;
+  border:1px solid rgba(2,6,23,0.04);
+  background:var(--white);
+}
+
+/* Social icons (LinkedIn / Instagram) */
+.hero-socials a .fab{
+  color: var(--accent-civil);
+  font-size:24px;
+  line-height:32px;
+}
+
+/* HERO aside / profile card - availability */
+.profile-card .profile-name{ font-family:Inter; font-weight:700; font-size:16px; line-height:24px; color:var(--text); }
+.profile-card .profile-position{ font-family:Inter; font-weight:500; font-size:14px; line-height:20px; color:var(--muted); }
+.profile-card .availability{
+  font-family:Inter;
+  font-weight:500;
+  font-size:16px;
+  line-height:24px;
+  color:var(--availability-text);
+  background:#ECF2FF;
+  padding:6px 8px;
+  border-radius:8px;
+  display:inline-block;
+  margin-top:6px;
+}
+
+/* ---------- ABOUT ---------- */
+.about-text h2{
+  font-family:Inter;
+  font-weight:700;
+  font-size:36px;
+  line-height:40px;
+  color:#111827;
+  margin:0 0 8px;
+}
+.about-text .muted{ /* subtítulo acima do corpo */
+  font-family:Inter;
+  font-weight:400;
+  font-size:20px;
+  line-height:28px;
+  color:#4B5563;
+  margin-bottom:12px;
+  word-wrap:break-word;
+}
+.about-text .about-body p{
+  font-family:Inter;
+  font-weight:400;
+  font-size:16px;
+  line-height:26px;
+  color:#4B5563;
+  margin:0;
+}
+
+/* "Excelência em Engenharia" */
+.about-body h3{
+  font-family:Inter;
+  font-weight:700;
+  font-size:30px;
+  line-height:36px;
+  color:#111827;
+  margin:0 0 8px;
+}
+
+/* estatísticas (cards) */
+.stat .stat-value{
+  font-family:Inter;
+  font-weight:700;
+  font-size:30px;
+  line-height:36px;
+  color:var(--primary-blue);
+}
+.stat .stat-label{
+  font-family:Inter;
+  font-weight:500;
+  font-size:16px;
+  line-height:24px;
+  color:#4B5563;
+}
+
+/* ---------- PROJECTS ---------- */
+.section-title.projects{
+  font-family:Inter;
+  font-weight:700;
+  font-size:36px;
+  line-height:40px;
+  color:#111827;
+}
+.section-sub.projects{
+  font-family:Inter;
+  font-weight:400;
+  font-size:20px;
+  line-height:28px;
+  color:#4B5563;
+}
+
+/* Project card title */
+.project-card .project-body h3{
+  font-family:Inter;
+  font-weight:600;
+  font-size:20px;
+  line-height:28px;
+  color:#111827;
+  margin:0 0 6px;
+}
+
+/* project excerpt */
+.project-card .project-body .project-excerpt{
+  font-family:Inter;
+  font-weight:400;
+  font-size:14px;
+  line-height:22.75px;
+  color:#4B5563;
+  margin:0 0 12px;
+}
+
+/* tags: utilitárias para cores diferentes */
+.tag{
+  display:inline-block;
+  font-family:Inter;
+  font-weight:600;
+  font-size:12px;
+  line-height:16px;
+  padding:6px 8px;
+  border-radius:999px;
+}
+.tag--blue{ color:#0649C0; background:rgba(37,99,192,0.06); }
+.tag--green{ color:#16A34A; background:rgba(22,163,74,0.06); }
+.tag--purple{ color:#9333EA; background:rgba(147,51,234,0.06); }
+.tag--yellow{ color:#CA8A04; background:rgba(202,138,4,0.06); }
+.tag--indigo{ color:#4F46E5; background:rgba(79,70,229,0.06); }
+.tag--cyan{ color:#0891B2; background:rgba(8,145,178,0.06); }
+.tag--orange{ color:#EA580C; background:rgba(234,88,12,0.06); }
+
+/* project meta icons */
+.project-meta .fas, .project-meta .fab{ font-size:16px; color:#0649C0; margin-right:8px; }
+
+/* year */
+.project-meta .year{ font-family:Inter; font-weight:400; font-size:12px; color:#6B7280; }
+
+/* ---------- SKILLS ---------- */
+.skills-section .section-title{
+  font-family:Inter;
+  font-weight:700;
+  font-size:36px;
+  line-height:40px;
+  color:#111827;
+}
+.skills-section .section-sub{
+  font-family:Inter;
+  font-weight:400;
+  font-size:20px;
+  line-height:28px;
+  color:#4B5563;
+}
+
+/* Skill card title */
+.skill-card h4{
+  font-family:Inter;
+  font-weight:600;
+  font-size:20px;
+  line-height:28px;
+  color:#111827;
+  margin:0 0 10px;
+}
+
+/* skill name */
+.skill span{ font-family:Inter; font-weight:400; font-size:16px; line-height:24px; color:#4B5563; }
+
+/* skill percent variants */
+.skill-percent{
+  font-family:Inter;
+  font-weight:600;
+  font-size:16px;
+  line-height:24px;
+}
+.skill-percent--blue{ color:#0649C0; }
+.skill-percent--green{ color:#16A34A; }
+.skill-percent--yellow{ color:#CA8A04; }
+.skill-percent--purple{ color:#9333EA; }
+.skill-percent--red{ color:#DC2626; }
+
+/* progress bars */
+.bar{ background:#EEF6FF; height:10px; border-radius:999px; overflow:hidden; }
+.bar > div{ height:100%; border-radius:999px; background:linear-gradient(90deg,#34d399,#2563eb); }
+
+/* ---------- CONTACT ---------- */
+.contact-inner h2{
+  font-family:Inter; font-weight:700; font-size:36px; line-height:40px; color:#111827; margin:0 0 8px;
+}
+.contact-inner .muted{
+  font-family:Inter; font-weight:400; font-size:20px; line-height:28px; color:#4B5563; margin-bottom:12px;
+}
+
+/* contact info titles (Email, Telefone, etc) */
+.contact-info div{ display:flex; gap:10px; align-items:center; font-family:Inter; }
+.contact-info i{ font-size:16px; color:var(--primary-blue); font-weight:900; }
+.contact-info .label{ font-weight:600; font-size:16px; color:#111827; }
+.contact-info .value{ font-weight:400; font-size:16px; color:#4B5563; }
+
+/* form labels & placeholders */
+.contact-form label, .contact-form .field-label{
+  font-family:Inter; font-weight:500; font-size:14px; line-height:14px; color:#111827;
+}
+.contact-form input::placeholder, .contact-form textarea::placeholder{
+  color:#0F1419; font-family:Inter; font-weight:400; font-size:14px; line-height:20px;
+}
+
+/* submit button */
+.contact-form .btn-primary{
+  font-family:Inter; font-weight:600; font-size:14px; line-height:20px; color:var(--white);
+  background:#0649C0; padding:12px 16px; border-radius:10px; border:0;
+}
+
+/* ---------- FOOTER ---------- */
+.site-footer .brand-footer{ font-family:Inter; font-weight:700; font-size:24px; line-height:32px; color:#60A5FA; }
+.site-footer .brand-footer .brand-name{ font-weight:600; font-size:18px; color:var(--white); margin-left:6px; }
+
+/* footer texts */
+.site-footer p, .site-footer .muted{
+  font-family:Inter; font-weight:400; font-size:16px; line-height:24px; color:#D1D5DB;
+}
+
+/* footer links title */
+.site-footer h4{ font-family:Inter; font-weight:600; font-size:18px; line-height:28px; color:var(--white); }
+
+/* small copyright */
+.site-footer .footer-bottom span{ font-family:Inter; font-weight:400; font-size:14px; line-height:20px; color:#9CA3AF; }
+
+/* scroll-to-top button */
+.btn-top{ font-family:Inter; font-weight:400; font-size:16px; line-height:24px; color:var(--white); }
+
+/* ---------- RESPONSIVE TUNING (mantém tamanhos grandes em desktop e reduz em mobile) ---------- */
+@media (max-width:1000px){
+  .hero-copy h1{ font-size:40px; line-height:44px; }
+  .hero-copy .lead{ font-size:18px; line-height:28px; }
+  .about-text h2{ font-size:32px; line-height:36px; }
+  .profile-img{ width:110px; height:110px; }
+}
+@media (max-width:480px){
+  .hero-copy h1{ font-size:28px; line-height:32px; }
+  .hero-copy .lead{ font-size:16px; line-height:24px; color:var(--lead-blue); }
+  .project-card .project-body h3{ font-size:18px; line-height:24px; }
+  .skill-card h4{ font-size:18px; line-height:24px; }
+}
