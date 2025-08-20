@@ -1,103 +1,259 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Gabriel Elias Franciosi Limberger - Engenheiro Civil | Portfolio</title>
-  <meta name="description" content="Engenheiro Civil especializado em projetos de construção, manutenção hospitalar e gestão de obras. Disponível para novos projetos.">
-  <meta name="keywords" content="engenheiro civil, construção civil, projetos arquitetônicos, autocad, revit, obras hospitalares">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Gabriel Elias Franciosi Limberger - Engenheiro Civil">
-  <meta property="og:description" content="Engenheiro Civil especializado em projetos de construção, manutenção hospitalar e gestão de obras. Disponível para novos projetos.">
-  <meta property="og:type" content="website">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gabriel Limberger — Engenheiro Civil</title>
+  <meta name="description" content="Engenheiro Civil especializado em projetos de construção, manutenção hospitalar e gestão de obras." />
 
   <!-- Fonts / icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <!-- CSS gerado (ajustei caminho para relativo) -->
-  <link rel="stylesheet" href="assets/index-BI8JT3Us.css" crossorigin>
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="assets/css/styles.css">
 
-  <!-- JS do app (ajustei caminho para relativo) -->
-  <script type="module" crossorigin src="assets/index-DwBWE3_7.js"></script>
-
-  <!-- OBS: removi scripts de desenvolvimento/3rd-party potencialmente invasivos (infird, replit-dev-banner).
-       Se precisar deles em produção, re-adicione explicitamente apontando para URLs seguros. -->
+  <meta name="theme-color" content="#0f172a">
 </head>
 <body>
-  <div id="root">
-    <div role="region" aria-label="Notifications (F8)" tabindex="-1" style="pointer-events: none;">
-      <ol tabindex="-1" class="fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px]"></ol>
-    </div>
-    <div class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white">
-      <nav class="fixed top-0 w-full z-50 navbar-blur border-b border-gray-200 dark:border-gray-700 transition-all duration-300 ">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="flex justify-between items-center py-4">
-            <div class="flex items-center">
-              <span class="text-2xl font-bold text-primary-600 dark:text-primary-400">GL</span>
-              <span class="ml-2 text-lg font-semibold text-gray-900 dark:text-white">Gabriel Limberger</span>
-            </div>
-            <div class="hidden md:flex space-x-8">
-              <button class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors" data-testid="nav-link-início">Início</button>
-              <button class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors" data-testid="nav-link-sobre">Sobre</button>
-              <button class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors" data-testid="nav-link-competências">Competências</button>
-              <button class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors" data-testid="nav-link-projetos">Projetos</button>
-              <button class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors" data-testid="nav-link-contato">Contato</button>
-            </div>
-            <div class="flex items-center space-x-4">
-              <button class="items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border bg-background h-10 px-4 py-2 hidden sm:inline-flex border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white dark:border-primary-400 dark:text-primary-400 dark:hover:bg-primary-400 dark:hover:text-gray-900" data-testid="button-download-cv"><i class="fas fa-download mr-2"></i>Baixar CV</button>
-              <button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 w-10 md:hidden" data-testid="button-mobile-menu" type="button" aria-haspopup="dialog" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu h-6 w-6"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button>
-            </div>
-          </div>
-        </div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">GL <span class="brand-name">Gabriel Limberger</span></a>
+      <nav class="nav" id="nav">
+        <a href="#home">Início</a>
+        <a href="#about">Sobre</a>
+        <a href="#skills">Competências</a>
+        <a href="#projects">Projetos</a>
+        <a href="#contact">Contato</a>
       </nav>
+      <div class="header-actions">
+        <button class="btn btn-outline">Baixar CV</button>
+        <button id="mobile-toggle" class="btn-mobile" aria-label="Abrir menu"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="mobile-menu" aria-hidden="true">
+      <a href="#home">Início</a>
+      <a href="#about">Sobre</a>
+      <a href="#skills">Competências</a>
+      <a href="#projects">Projetos</a>
+      <a href="#contact">Contato</a>
+    </div>
+  </header>
 
-      <section id="home" class="pt-20 gradient-bg text-white dark:bg-gradient-to-br dark:from-gray-900 dark:to-black">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 class="text-5xl lg:text-6xl font-bold mb-6 leading-tight" data-testid="hero-title">Engenheiro <span class="text-blue-200 dark:text-primary-400">Civil</span></h1>
-              <p class="text-xl text-blue-100 dark:text-gray-300 mb-8 leading-relaxed" data-testid="hero-description">Especializado em projetos de construção civil, manutenção hospitalar e gestão de obras. Experiência sólida com AutoCAD, Revit, QiBuilder e gestão de projetos de infraestrutura com mais de 4 anos de experiência profissional.</p>
-              <div class="flex flex-col sm:flex-row gap-4 mb-8">
-                <button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 bg-white text-primary-600 font-semibold hover:bg-gray-100 dark:bg-primary-600 dark:text-white dark:hover:bg-primary-700" data-testid="button-hire-me"><i class="fas fa-envelope mr-2"></i>Contratar</button>
-                <button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 bg-white text-primary-600 font-semibold hover:bg-gray-100 dark:bg-primary-600 dark:text-white dark:hover:bg-primary-700" data-testid="button-view-work"><i class="fas fa-eye mr-2"></i>Ver Trabalhos</button>
-              </div>
-              <div class="flex space-x-6">
-                <a href="https://www.linkedin.com/mwlite/profile/me?trk=p_mwlite_feed-secondary_nav" target="_blank" rel="noopener noreferrer" class="text-blue-200 hover:text-white dark:text-gray-400 dark:hover:text-primary-400 transition-colors" data-testid="link-linkedin"><i class="fab fa-linkedin text-2xl"></i></a>
-                <a href="https://www.instagram.com/gabriel.limberger_/" target="_blank" rel="noopener noreferrer" class="text-blue-200 hover:text-white dark:text-gray-400 dark:hover:text-primary-400 transition-colors" data-testid="link-instagram"><i class="fab fa-instagram text-2xl"></i></a>
-              </div>
-            </div>
-
-            <div class="flex justify-center lg:justify-end">
-              <div class="relative">
-                <img src="attached_assets/IMG_1855_1755180585806.jpeg" alt="Gabriel Elias Franciosi Limberger - Engenheiro Civil" class="rounded-2xl shadow-2xl w-80 h-96 object-cover" data-testid="hero-image">
-                <div class="absolute -bottom-6 -right-6 bg-white dark:bg-gray-800 p-4 rounded-xl shadow-lg">
-                  <div class="flex items-center text-gray-700 dark:text-gray-300">
-                    <div class="w-3 h-3 bg-green-500 rounded-full mr-2"></div>
-                    <span class="font-medium" data-testid="availability-status">Disponível para contratação</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
+  <main>
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1>Engenheiro <span class="accent">Civil</span></h1>
+          <p class="lead">Especializado em projetos de construção civil, manutenção hospitalar e gestão de obras. Experiência sólida com AutoCAD, Revit, QiBuilder e gestão de projetos com mais de 4 anos de experiência profissional.</p>
+          <div class="hero-ctas">
+            <a href="#contact" class="btn btn-primary"><i class="fas fa-envelope"></i> Contratar</a>
+            <a href="#projects" class="btn btn-ghost"><i class="fas fa-eye"></i> Ver Trabalhos</a>
+          </div>
+          <div class="hero-socials">
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
           </div>
         </div>
-      </section>
 
-      <!-- rest of the page content unchanged (about, projects, skills, contact, footer) -->
-      <!-- NOTE: everywhere that used src="/attached_assets/..." or src="/assets/..." the leading slash was removido -->
-      <!-- Mantive todo o corpo que você enviou; apenas converti paths para relativos e removi scripts de dev -->
+        <aside class="hero-card">
+          <div class="profile-card">
+            <img src="assets/images/profile.jpg" alt="Gabriel Limberger" class="profile-img">
+            <div class="profile-meta">
+              <div class="profile-name">Gabriel Limberger</div>
+              <div class="profile-position">Engenheiro Civil</div>
+              <div class="availability">Disponível para contratação</div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
 
-      <!-- (inclua aqui TODO restante do HTML que você já tinha; por brevidade não colei todo novamente,
-           mas ao aplicar em seu repositório cole o conteúdo completo mantendo os mesmos ajustes de path) -->
+    <!-- ABOUT -->
+    <section id="about" class="section about">
+      <div class="container about-inner">
+        <div class="about-text">
+          <h2>Sobre Mim</h2>
+          <p class="muted">Engenheiro Civil dedicado com paixão por criar soluções inovadoras em infraestrutura e construção que impulsionam o crescimento e melhoram a qualidade de vida.</p>
+          <div class="about-body">
+            <p>Com mais de 4 anos de experiência em engenharia civil, especializo-me em projetos robustos e sustentáveis usando tecnologias modernas. Minha expertise abrange construção civil, manutenção hospitalar, projetos hidrossanitários e elétricos, além de gestão de equipes.</p>
+          </div>
+        </div>
 
+        <div class="about-media">
+          <img src="assets/images/site-construction.jpg" alt="Canteiro de obras" class="about-image">
+          <div class="stats-grid">
+            <div class="stat"><div class="stat-value">4+</div><div class="stat-label">Anos de Experiência</div></div>
+            <div class="stat"><div class="stat-value">20+</div><div class="stat-label">Projetos Concluídos</div></div>
+            <div class="stat"><div class="stat-value">15+</div><div class="stat-label">Clientes Satisfeitos</div></div>
+            <div class="stat"><div class="stat-value">1</div><div class="stat-label">Presidência CIPA</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section projects">
+      <div class="container">
+        <h2 class="section-title">Projetos em Destaque</h2>
+        <p class="section-sub">Uma vitrine de projetos recentes demonstrando minha expertise em diferentes tecnologias e segmentos da engenharia civil.</p>
+
+        <div class="projects-grid">
+          <!-- Card template: substitua imagens e textos -->
+          <article class="project-card">
+            <img src="assets/images/project1.jpg" alt="Projeto 1" class="project-img">
+            <div class="project-body">
+              <h3>Projeto Estrutural - Fundações</h3>
+              <p class="project-excerpt">Desenvolvimento de projeto estrutural completo com análise de fundações e dimensionamento de pilares e vigas.</p>
+              <div class="project-meta">
+                <span class="tag">AutoCAD</span>
+                <span class="year">2023</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img src="assets/images/project2.jpg" alt="Projeto 2" class="project-img">
+            <div class="project-body">
+              <h3>Projeto Estrutural - Concreto Armado</h3>
+              <p class="project-excerpt">Projeto estrutural com detalhamento de armaduras, plantas de formas e especificações técnicas.</p>
+              <div class="project-meta">
+                <span class="tag">Concreto</span>
+                <span class="year">2023</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img src="assets/images/project3.jpg" alt="Projeto 3" class="project-img">
+            <div class="project-body">
+              <h3>Projeto Estrutural - Lajes e Vigas</h3>
+              <p class="project-excerpt">Dimensionamento e detalhamento de lajes e vigas em concreto armado com cálculo de esforços.</p>
+              <div class="project-meta">
+                <span class="tag">Cálculo</span>
+                <span class="year">2022-2023</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Adicione mais cards seguindo o padrão -->
+        </div>
+
+        <div class="projects-actions">
+          <a href="#projects" class="btn btn-outline">Ver Todos os Projetos</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section skills">
+      <div class="container">
+        <h2 class="section-title">Competências Técnicas</h2>
+        <p class="section-sub">Um conjunto abrangente de ferramentas e tecnologias modernas de engenharia que me permitem entregar resultados excepcionais.</p>
+
+        <div class="skills-grid">
+          <div class="skill-card">
+            <h4>Software de Engenharia</h4>
+            <div class="skill"><span>AutoCAD</span><div class="bar"><div style="width:95%"></div></div></div>
+            <div class="skill"><span>REVIT</span><div class="bar"><div style="width:90%"></div></div></div>
+            <div class="skill"><span>QiBuilder</span><div class="bar"><div style="width:85%"></div></div></div>
+          </div>
+
+          <div class="skill-card">
+            <h4>Projetos Técnicos</h4>
+            <div class="skill"><span>Hidrossanitários</span><div class="bar"><div style="width:88%"></div></div></div>
+            <div class="skill"><span>Elétricos</span><div class="bar"><div style="width:85%"></div></div></div>
+          </div>
+
+          <div class="skill-card">
+            <h4>Gestão & Manutenção</h4>
+            <div class="skill"><span>Manutenção Predial</span><div class="bar"><div style="width:92%"></div></div></div>
+            <div class="skill"><span>Gestão de Obras</span><div class="bar"><div style="width:85%"></div></div></div>
+          </div>
+
+          <div class="skill-card">
+            <h4>Escritório & Análise</h4>
+            <div class="skill"><span>Excel Avançado</span><div class="bar"><div style="width:90%"></div></div></div>
+            <div class="skill"><span>Orçamentos</span><div class="bar"><div style="width:88%"></div></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact">
+      <div class="container contact-inner">
+        <div class="contact-copy">
+          <h2>Vamos Trabalhar Juntos</h2>
+          <p class="muted">Pronto para dar vida ao seu próximo projeto? Vamos discutir como minha expertise pode ajudá-lo a alcançar seus objetivos.</p>
+
+          <div class="contact-info">
+            <div><i class="fas fa-envelope"></i> enggabriellimberger@gmail.com</div>
+            <div><i class="fas fa-phone"></i> (42) 99914-3258</div>
+            <div><i class="fas fa-map-marker-alt"></i> Guarapuava, PR</div>
+          </div>
+        </div>
+
+        <form class="contact-form" action="#" method="post" onsubmit="return false;">
+          <div class="form-row">
+            <input type="text" name="name" placeholder="Nome Completo" required>
+            <input type="email" name="email" placeholder="Endereço de Email" required>
+          </div>
+          <div class="form-row">
+            <select name="subject">
+              <option>Projeto Estrutural</option>
+              <option>Projeto Hospitalar</option>
+              <option>Consultoria</option>
+            </select>
+            <input type="text" name="budget" placeholder="Faixa Orçamentária">
+          </div>
+          <textarea name="message" rows="6" placeholder="Conte-me sobre seu projeto..."></textarea>
+          <button class="btn btn-primary" type="submit"><i class="fas fa-paper-plane"></i> Enviar Mensagem</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-col">
+        <div class="brand-footer">GL <span class="brand-name">Gabriel Limberger</span></div>
+        <p class="muted">Engenheiro Civil especializado em projetos de construção, manutenção hospitalar e gestão de obras em Guarapuava, PR.</p>
+        <div class="socials">
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Links Rápidos</h4>
+        <ul class="footer-links">
+          <li><a href="#home">Início</a></li>
+          <li><a href="#about">Sobre</a></li>
+          <li><a href="#skills">Competências</a></li>
+          <li><a href="#projects">Projetos</a></li>
+          <li><a href="#contact">Contato</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <div class="muted">enggabriellimberger@gmail.com</div>
+        <div class="muted">(42) 99914-3258</div>
+        <div class="muted">Guarapuava, PR</div>
+      </div>
     </div>
-  </div>
 
-  <!-- Se você usa um script cliente gerado (ex.: assets/index-DwBWE3_7.js), ele já está referenciado no head -->
-  <!-- Removi replit-dev-banner e scripts externos de infird. Re-adicione-os somente se necessário e confiável. -->
+    <div class="footer-bottom">
+      <span>© 2025 Gabriel Elias Franciosi Limberger. Todos os direitos reservados.</span>
+      <button id="scroll-top" class="btn-top"><i class="fas fa-arrow-up"></i> Voltar ao Topo</button>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
 </body>
 </html>
