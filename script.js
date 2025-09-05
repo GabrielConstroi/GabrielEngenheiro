@@ -22,26 +22,40 @@ document.addEventListener('DOMContentLoaded', function() {
     // Processamento do formulário de contato
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+        const statusEl = document.getElementById('form-status');
+        contactForm.addEventListener('submit', async function(e) {
             e.preventDefault();
-            
-            // Obter dados do formulário
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const projectType = document.getElementById('project-type').value;
-            const budget = document.getElementById('budget').value;
-            const details = document.getElementById('project-details').value;
-            
-            // Validação básica
-            if (!name || !email || !details) {
-                alert('Por favor, preencha os campos obrigatórios.');
-                return;
+            if (statusEl) {
+                statusEl.style.display = 'block';
+                statusEl.style.color = '#0649C0';
+                statusEl.textContent = 'Enviando...';
             }
-            
-            // Aqui você normalmente enviaria os dados para um servidor
-            // Para demonstração, apenas mostramos uma mensagem de sucesso
-            alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
-            contactForm.reset();
+            const formData = new FormData(contactForm);
+            try {
+                const response = await fetch(contactForm.action, {
+                    method: contactForm.method,
+                    body: formData,
+                    headers: { 'Accept': 'application/json' }
+                });
+                if (response.ok) {
+                    if (statusEl) {
+                        statusEl.textContent = 'Mensagem enviada com sucesso!';
+                        statusEl.style.color = '#16A34A';
+                    }
+                    contactForm.reset();
+                } else {
+                    const data = await response.json().catch(()=>({}));
+                    if (statusEl) {
+                        statusEl.textContent = data.errors ? data.errors.map(e=>e.message).join(', ') : 'Erro ao enviar. Tente novamente.';
+                        statusEl.style.color = '#DC2626';
+                    }
+                }
+            } catch (err) {
+                if (statusEl) {
+                    statusEl.textContent = 'Falha de conexão. Verifique sua internet.';
+                    statusEl.style.color = '#DC2626';
+                }
+            }
         });
     }
 
@@ -84,4 +98,73 @@ document.addEventListener('DOMContentLoaded', function() {
             this.classList.toggle('active');
         });
     }
+
+    // Modal de vídeo
+    const videoThumbs = document.querySelectorAll('.project-video-thumb');
+    const modal = document.getElementById('video-modal');
+    const modalVideo = document.getElementById('modal-video');
+    const closeEls = document.querySelectorAll('[data-close-modal]');
+    let lastFocused = null;
+
+    function openVideoModal(thumb) {
+        if (!modal || !modalVideo) return;
+        lastFocused = document.activeElement;
+        const mp4 = thumb.getAttribute('data-video-mp4');
+        const mov = thumb.getAttribute('data-video-mov');
+        const poster = thumb.getAttribute('data-video-poster');
+        modalVideo.innerHTML = '';
+        if (poster) modalVideo.setAttribute('poster', poster);
+        // Preferir MP4 (compatibilidade maior)
+        if (mp4) {
+            const s = document.createElement('source');
+            s.src = mp4;
+            s.type = 'video/mp4';
+            modalVideo.appendChild(s);
+        }
+        if (mov) {
+            const s2 = document.createElement('source');
+            s2.src = mov;
+            s2.type = 'video/quicktime';
+            modalVideo.appendChild(s2);
+        }
+        modal.classList.add('is-open');
+        modal.setAttribute('aria-hidden', 'false');
+        modalVideo.load();
+        modalVideo.play().catch(()=>{});
+        // Foco acessível
+        const closeBtn = modal.querySelector('.video-modal__close');
+        if (closeBtn) closeBtn.focus();
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeVideoModal() {
+        if (!modal || !modalVideo) return;
+        modal.classList.remove('is-open');
+        modal.setAttribute('aria-hidden', 'true');
+        modalVideo.pause();
+        modalVideo.removeAttribute('src');
+        modalVideo.innerHTML = '';
+        document.body.style.overflow = '';
+        if (lastFocused) lastFocused.focus();
+    }
+
+    videoThumbs.forEach(thumb => {
+        thumb.addEventListener('click', () => openVideoModal(thumb));
+        thumb.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                openVideoModal(thumb);
+            }
+        });
+        thumb.setAttribute('tabindex', '0');
+        thumb.setAttribute('role', 'button');
+        thumb.setAttribute('aria-label', 'Abrir vídeo do projeto');
+    });
+
+    closeEls.forEach(el => el.addEventListener('click', closeVideoModal));
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal && modal.classList.contains('is-open')) {
+            closeVideoModal();
+        }
+    });
 });

@@ -27,7 +27,8 @@
       <a href="#projects">Projetos</a>
       <a href="#contact">Contato</a>
     </nav>
-    <a href="assets/cv_gabriel_limberger.pdf" download class="btn-download">
+  <!-- Atualizado para usar o arquivo local cv.pdf -->
+  <a href="cv.pdf" download class="btn-download">
       <i class="fas fa-download"></i>
       Baixar CV
     </a>
@@ -323,7 +324,13 @@
        <!-- Project 7 -->
       <div class="project-card">
         <div class="project-image">
-         <video src="https://github.com/GabrielConstroi/GabrielEngenheiro/blob/main/copy_50B63BBB-EF9F-4C78-955D-73F519C65761%202.mp4" class="w-full h-48 object-cover" data-testid="project-video-6" controls="" preload="metadata">Your browser does not support the video tag.</video>
+          <!-- Thumbnail que abre modal de vídeo -->
+          <div class="project-video-thumb" data-video-mp4="copy_50B63BBB-EF9F-4C78-955D-73F519C65761%202.mp4" data-video-mov="copy_50B63BBB-EF9F-4C78-955D-73F519C65761.mov" data-video-poster="IMG_2896.png">
+            <img src="IMG_2896.png" alt="Preview do vídeo do projeto" />
+            <div class="play-overlay" aria-hidden="true">
+              <i class="fas fa-play"></i>
+            </div>
+          </div>
         </div>
         <div class="project-content">
           <h3>Projeto Hidráulico e Elétrico 3D<br></h3>
@@ -662,25 +669,22 @@
         </div>
       </div>
 
-      <!-- modify this form HTML and place wherever you want your form -->
-<form
-   action="https://formspree.io/f/mldlkgzz"
-  method="POST"
+      <!-- Formulário corrigido e integrado ao Formspree -->
       <div class="contact-form-container">
-        <form id="contact-form" class="contact-form">
+        <form id="contact-form" class="contact-form" action="https://formspree.io/f/xrbaoogz" method="POST">
           <div class="form-group">
             <label for="name">Nome Completo</label>
-            <input type="text" id="name" placeholder="Seu nome completo" required>
+            <input type="text" id="name" name="name" placeholder="Seu nome completo" required>
           </div>
           
           <div class="form-group">
             <label for="email">Endereço de Email</label>
-            <input type="email" id="email" placeholder="seu.email@exemplo.com" required>
+            <input type="email" id="email" name="email" placeholder="seu.email@exemplo.com" required>
           </div>
           
           <div class="form-group">
             <label for="project-type">Tipo de Projeto</label>
-            <select id="project-type" required>
+            <select id="project-type" name="project_type" required>
               <option value="" selected disabled>Selecione o tipo de projeto</option>
               <option value="structural">Projeto Estrutural</option>
               <option value="hydraulic">Projeto Hidráulico</option>
@@ -692,7 +696,7 @@
           
           <div class="form-group">
             <label for="budget">Faixa Orçamentária</label>
-            <select id="budget">
+            <select id="budget" name="budget">
               <option value="" selected disabled>Selecione a faixa orçamentária</option>
               <option value="small">Até R$ 5.000</option>
               <option value="medium">R$ 5.000 - R$ 20.000</option>
@@ -703,8 +707,11 @@
           
           <div class="form-group">
             <label for="project-details">Detalhes do Projeto</label>
-            <textarea id="project-details" rows="5" placeholder="Conte-me sobre seu projeto, cronograma e requisitos específicos..." required></textarea>
+            <textarea id="project-details" name="details" rows="5" placeholder="Conte-me sobre seu projeto, cronograma e requisitos específicos..." required></textarea>
           </div>
+          <!-- Honeypot anti-spam -->
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+          <div id="form-status" style="display:none;font-size:14px;color:#0649C0"></div>
           
           <button type="submit" class="btn-submit">
             <i class="fas fa-paper-plane"></i>
@@ -717,6 +724,17 @@
 </section>
 
 <!-- Footer -->
+<!-- Modal de Vídeo -->
+<div id="video-modal" class="video-modal" aria-hidden="true">
+  <div class="video-modal__backdrop" data-close-modal></div>
+  <div class="video-modal__dialog" role="dialog" aria-modal="true" aria-label="Reprodução de vídeo">
+    <button class="video-modal__close" type="button" data-close-modal aria-label="Fechar vídeo">&times;</button>
+    <div class="video-modal__content">
+      <video id="modal-video" controls playsinline preload="metadata" poster="IMG_2896.png"></video>
+    </div>
+  </div>
+</div>
+
 <footer class="footer">
   <div class="container">
     <div class="footer-top">
