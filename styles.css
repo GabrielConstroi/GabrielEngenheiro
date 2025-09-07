@@ -229,10 +229,10 @@ section {
   position: absolute;
   bottom: -28px;
   left: 50%;
-  transform: translateX(-50%);
+  transform: matrix(1, 0, 0, 1, 0, 0);
   background: white;
   border-radius: 12px;
-  padding: 16px 24px;
+  padding: 16px 5px;
   display: flex;
   align-items: center;
   gap: 8px;
