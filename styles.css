@@ -531,6 +531,20 @@ section {
   margin-right: 16px;
 }
 
+.skill-header i2 {
+  font-size: 20px;
+  color: #16a43a;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(6, 73, 192, 0.1);
+  border-radius: 20px;
+  margin-right: 16px;
+}
+
+
 .skill-header h3 {
   font-size: 20px;
 }
