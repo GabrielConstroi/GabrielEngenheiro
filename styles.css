@@ -225,6 +225,7 @@ section {
 }
 
 .status-badge {
+  color: black;
   position: absolute;
   bottom: -28px;
   left: 50%;
