@@ -178,11 +178,11 @@ section {
   font-weight: 700;
   line-height: 1;
   margin-bottom: 28px;
-  color: white;
+  color: grey;
 }
 
 .hero h1 span {
-  color: #BFDBFE;
+  color: #374151;
 }
 
 .hero p {
