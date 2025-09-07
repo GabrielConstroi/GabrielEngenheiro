@@ -574,6 +574,12 @@ section {
   border-radius: 9999px;
 }
 
+/* Text color helpers for skill names / percents */
+.skill-name.green-text, .skill-percent.green-text { color: #16a34a; font-weight: 600; }
+.skill-name.orange-text, .skill-percent.orange-text { color: #ca8a04; font-weight: 600; }
+.skill-name.purple-text, .skill-percent.purple-text { color: #9333ea; font-weight: 600; }
+.skill-name.red-text, .skill-percent.red-text { color: #dc2626; font-weight: 600; }
+
 /* Contact Section */
 .contact {
   background: white;
