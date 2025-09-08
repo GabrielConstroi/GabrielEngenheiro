@@ -542,12 +542,6 @@ section {
   gap: 20px;
 }
 
-.skill-progress-g {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
 .skill-item {
   margin-bottom: 8px;
 }
@@ -568,11 +562,6 @@ section {
   font-weight: 600;
 }
 
-.skill-info-g span:last-child {
-  color: #16a34a;
-  font-weight: 600;
-}
-
 .progress-bar {
   height: 8px;
   background: #E5E7EB;
@@ -580,22 +569,9 @@ section {
   overflow: hidden;
 }
 
-.progress-bar-g {
-  height: 8px;
-  background: #16a34a;
-  border-radius: 9999px;
-  overflow: hidden;
-}
-
 .progress {
   height: 100%;
   background: #0649C0;
-  border-radius: 9999px;
-}
-
-.progress-g {
-  height: 100%;
-  background: #16a34a;
   border-radius: 9999px;
 }
 
@@ -678,6 +654,247 @@ section {
   background: #16a34a;
   border-radius: 9999px;
 }
+
+/* Skills Section  ROXO */
+.skills-p {
+  background: #F9FAFB;
+}
+
+.skills-grid-p {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.skill-card-p {
+  background: #F7F8F8;
+  border-radius: 20px;
+  padding: 24px;
+  border: 1px solid #E1EAEF;
+}
+
+.skill-header-p {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.skill-header-p i {
+  font-size: 20px;
+  color: #9434eb;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(6, 73, 192, 0.1);
+  border-radius: 20px;
+  margin-right: 16px;
+}
+
+.skill-header-p h3 {
+  font-size: 20px;
+}
+
+.skill-progress-p {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.skill-item-p {
+  margin-bottom: 8px;
+}
+
+.skill-info-p {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.skill-info-p span {
+  font-size: 16px;
+  color: #9434eb;
+}
+
+.skill-info-p span:last-child {
+  color: #9434eb;
+  font-weight: 600;
+}
+
+.progress-bar-p {
+  height: 8px;
+  background: #E5E7EB;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.progress-p {
+  height: 100%;
+  background: #9434eb;
+  border-radius: 9999px;
+}
+
+/* Skills Section  LARANJA */
+.skills-o {
+  background: #F9FAFB;
+}
+
+.skills-grid-o {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.skill-card-o {
+  background: #F7F8F8;
+  border-radius: 20px;
+  padding: 24px;
+  border: 1px solid #E1EAEF;
+}
+
+.skill-header-o {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.skill-header-o i {
+  font-size: 20px;
+  color: #c98904;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(6, 73, 192, 0.1);
+  border-radius: 20px;
+  margin-right: 16px;
+}
+
+.skill-header-o h3 {
+  font-size: 20px;
+}
+
+.skill-progress-o {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.skill-item-o {
+  margin-bottom: 8px;
+}
+
+.skill-info-o {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.skill-info-o span {
+  font-size: 16px;
+  color: #c98904;
+}
+
+.skill-info-o span:last-child {
+  color: #c98904;
+  font-weight: 600;
+}
+
+.progress-bar-o {
+  height: 8px;
+  background: #E5E7EB;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.progress-o {
+  height: 100%;
+  background: #c98904;
+  border-radius: 9999px;
+}
+
+/* Skills Section  Vermelho */
+.skills-r {
+  background: #F9FAFB;
+}
+
+.skills-grid-r {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.skill-card-r {
+  background: #F7F8F8;
+  border-radius: 20px;
+  padding: 24px;
+  border: 1px solid #E1EAEF;
+}
+
+.skill-header-r {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.skill-header-r i {
+  font-size: 20px;
+  color: #dc2626;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(6, 73, 192, 0.1);
+  border-radius: 20px;
+  margin-right: 16px;
+}
+
+.skill-header-r h3 {
+  font-size: 20px;
+}
+
+.skill-progress-r {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.skill-item-r {
+  margin-bottom: 8px;
+}
+
+.skill-info-r {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.skill-info-r span {
+  font-size: 16px;
+  color: #dc2626;
+}
+
+.skill-info-r span:last-child {
+  color: #dc2626;
+  font-weight: 600;
+}
+
+.progress-bar-r {
+  height: 8px;
+  background: #E5E7EB;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.progress-r {
+  height: 100%;
+  background: #dc2626;
+  border-radius: 9999px;
+}
+
 /* Text color helpers for skill names / percents */
 .skill-name.green-text, .skill-percent.green-text { color: #16a34a; font-weight: 600; }
 .skill-name.orange-text, .skill-percent.orange-text { color: #ca8a04; font-weight: 600; }
