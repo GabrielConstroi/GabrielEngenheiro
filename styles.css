@@ -568,7 +568,7 @@ section {
   font-weight: 600;
 }
 
-.skill-info span-g:last-child {
+.skill-info-g span:last-child {
   color: #16a34a;
   font-weight: 600;
 }
