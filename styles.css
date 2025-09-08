@@ -527,7 +527,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(6, 73, 192, 0.1);
+  background: rgb(195 225 254 / var(--tw-bg-opacity, 1));
   border-radius: 20px;
   margin-right: 16px;
 }
