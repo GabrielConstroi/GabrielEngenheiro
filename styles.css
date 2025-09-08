@@ -977,7 +977,9 @@ section {
 .social-btn.instagram {
   background: #DB2777;
 }
-
+.social-btn.whatsapp {
+  background: #25d366;
+}
 .contact-form-container {
   width: 100%;
 }
