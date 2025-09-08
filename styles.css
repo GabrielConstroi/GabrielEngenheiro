@@ -542,6 +542,12 @@ section {
   gap: 20px;
 }
 
+.skill-progress-g {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .skill-item {
   margin-bottom: 8px;
 }
@@ -559,6 +565,11 @@ section {
 
 .skill-info span:last-child {
   color: #0649C0;
+  font-weight: 600;
+}
+
+.skill-info span-g:last-child {
+  color: #16a34a;
   font-weight: 600;
 }
 
