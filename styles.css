@@ -569,6 +569,13 @@ section {
   overflow: hidden;
 }
 
+.progress-bar-g {
+  height: 8px;
+  background: #16a34a;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
 .progress {
   height: 100%;
   background: #0649C0;
