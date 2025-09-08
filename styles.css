@@ -575,6 +575,12 @@ section {
   border-radius: 9999px;
 }
 
+.progress-g {
+  height: 100%;
+  background: #16a34a;
+  border-radius: 9999px;
+}
+
 /* Text color helpers for skill names / percents */
 .skill-name.green-text, .skill-percent.green-text { color: #16a34a; font-weight: 600; }
 .skill-name.orange-text, .skill-percent.orange-text { color: #ca8a04; font-weight: 600; }
